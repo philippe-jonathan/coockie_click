@@ -26,6 +26,7 @@ $("#bouton2").click(function incrementer() {
 $("#autoclick").click(function(){
 	if(score>=200){
 		score = score -200;
+		$("#autoclick").attr("disabled", "disabled");
 		setInterval(function(){
 			score= score + clickauto;
 			$("#display").html(score);
@@ -34,4 +35,6 @@ $("#autoclick").click(function(){
 		alert("Vous avez pas assez de COINS!!!")
 	}
 	$("#display").html(score);
+
+	
 });
